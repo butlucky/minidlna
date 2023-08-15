@@ -1,12 +1,15 @@
 #!/bin/bash
+
+MINIDLNAHOME="/home/hewenwen/minidlna/"
 CROSS_VAL="/home/hewenwen/rv1126/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-"
-GCC_VAL="/home/hewenwen/rv1126/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc"
-STRIP_VAL="/home/hewenwen/rv1126/prebuilts/gcc/linux-x86/arm/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf/bin/arm-linux-gnueabihf-strip"
-INCLUDE_VAL="/home/hewenwen/minidlna/minidlna-deps/include"
-LIBS_VAL="/home/hewenwen/minidlna/minidlna-deps/lib"
 HOST_VAL="aarch64-linux-gnu"
-PRE_VAL="/home/hewenwen/minidlna/minidlna-deps"
-OUTPUT_VAL="/home/hewenwen/minidlna/output"
+
+GCC_VAL=${CROSS_VAL}"gcc"
+STRIP_VAL=${CROSS_VAL}"strip"
+INCLUDE_VAL=${MINIDLNAHOME}"/minidlna-deps/include"
+LIBS_VAL=${MINIDLNAHOME}"/minidlna/minidlna-deps/lib"
+PRE_VAL=${MINIDLNAHOME}"/minidlna-deps"
+OUTPUT_VAL=${MINIDLNAHOME}"/output"
 
 if [ $# == 0 ];then
 rm -rf flac-1.3.4 libexif-0.6.24 libogg-1.3.5 minidlna-1.3.2 zlib-1.2.11 ffmpeg-6.0 jpeg-6b libid3tag-0.15.1b libvorbis-1.3.7 minidlna-deps sqlite-autoconf-3410200 output
